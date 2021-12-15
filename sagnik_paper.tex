@@ -377,7 +377,7 @@ is used to transform the non-Gaussian measurement
 vector $\bm{Z}$  to a Gaussian vector $\bm{Z}_{\bm{\theta}_1}$. 
 
 \begin{algorithm}[H]
-\footnotesize
+
 \caption{TGH Log-Likelihood Estimation.}
 \label{algo:non-gaussian-model}
 \begin{algorithmic}[1]
@@ -460,13 +460,13 @@ requirement of the application.
 
 \begin{figure}
      \centering
-     \begin{subfigure}[b]{0.23\textwidth}
+     \begin{subfigure}[b]{0.24\textwidth}
          \centering
          \includegraphics[width=\textwidth]{./figures/ranks-decay-8100.pdf}
          \caption{$N = 8100$ / $ts = 810$.}
          \label{fig:tlr-8100}
      \end{subfigure}
-     \begin{subfigure}[b]{0.23\textwidth}
+     \begin{subfigure}[b]{0.24\textwidth}
          \centering
          \includegraphics[width=\textwidth]{./figures/ranks-decay-32400.pdf}
          \caption{$N = 32400$ / $ts = 3240$.}
@@ -568,13 +568,13 @@ parameter $\nu$, which produces higher ranks in the rough field.
 
 \begin{figure}
      \centering
-     \begin{subfigure}[b]{0.23\textwidth}
+     \begin{subfigure}[b]{0.24\textwidth}
          \centering
          \includegraphics[width=\textwidth]{./figures/ranks-decay-8100-hodlr.pdf}
          \caption{$N = 8100$ / $leaf = 100$.}
          \label{fig:hodlr-decay-8100}
      \end{subfigure}
-     \begin{subfigure}[b]{0.23\textwidth}
+     \begin{subfigure}[b]{0.24\textwidth}
          \centering
          \includegraphics[width=\textwidth]{./figures/ranks-decay-32400-hodlr.pdf}
          \caption{$N = 32400$ / $leaf = 400$.}
@@ -606,7 +606,7 @@ solver of the covariance matrix. This algorithm performs prediction of the missi
 on the location $\bm{s}_k$.
 
 \begin{algorithm}[H]
-\footnotesize
+
 \caption{TGH Prediction.}
 \label{algo:non-gaussian-pred}
 \begin{algorithmic}[1]
@@ -673,7 +673,7 @@ and NLopt v2.6.2 optimization libraries. For HODLR-based implementation, we use 
 The accuracy and qualitative analyses are performed using synthetic and real datasets, i.e., the precipitation dataset of Germany. We use the daily average precipitation of Germany in January of the year 2021. The data is collected by Kaspar et al. \cite{kaspar2013monitoring} and covers the whole of Germany with a spatial resolution of $1$ km $\times$ $1$ km. The daily average precipitation is given in mm. Because of this high spatial resolution, the total number of locations is $n = 358303$. To make the data stationary, we remove the mean of the daily average precipitation of January over the year 2000 to 2020 from the data. So, the data can be interpreted as the excess daily average precipitation for January of 2021. The spatial image of the data is given in Fig.~\ref{fig:data_image}.
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.7\linewidth]{./figures/data_spatial_image.pdf}
+\includegraphics[width=0.75\linewidth]{./figures/data_spatial_image.pdf}
   \caption{Spatial image of the excess daily average precipitation (in mm) of January, 2021 on 358303 locations over Germany.
 }
   \label{fig:data_image}
@@ -739,14 +739,14 @@ The boxplots suggest that the estimation accuracy does not vary much with the di
 %   \vspace{-8mm}
 %   \caption{ $\xi = 0$, $\omega = 2$, $g = 0.2$, $h = 0.2$, $\nu = 0.5$, and $\phi = 0.42$.}
 %\end{subfigure}
-\begin{subfigure}{0.45\textwidth}%
+\begin{subfigure}{0.44\textwidth}%
   \centering
   \includegraphics[width=\linewidth]{./figures/boxplot_0.420000_0.200000_0.200000.pdf}
  % \vspace{-8mm}  
   \caption{ $\xi = 0$, $\omega = 2$, $g = 0.2$, $h = 0.2$, $\nu = 0.5$, and $\phi = 0.42$.}
 \end{subfigure}%
 \hspace{4mm}
-\begin{subfigure}{0.45\textwidth}%
+\begin{subfigure}{0.44\textwidth}%
   \centering
   \includegraphics[width=\linewidth]{./figures/boxplot_0.700000_0.200000_0.200000.pdf}
 % \vspace{-8mm}
@@ -754,14 +754,14 @@ The boxplots suggest that the estimation accuracy does not vary much with the di
 \end{subfigure}
 
 \centering
-\begin{subfigure}{0.45\textwidth}%
+\begin{subfigure}{0.44\textwidth}%
   \centering
   \includegraphics[width=\linewidth]{./figures/boxplot_0.960000_0.500000_0.300000.pdf}
  %  \vspace{-8mm}
   \caption{$\xi = 0$, $\omega = 2$, $g = 0.5$, $h = 0.3$, $\nu = 0.5$, and $\phi = 0.96$.}
 \end{subfigure}%
 \hspace{4mm}
-\begin{subfigure}{0.45\textwidth}%
+\begin{subfigure}{0.44\textwidth}%
   \centering
   \includegraphics[width=\linewidth]{./figures/boxplot_0.980000_0.200000_0.200000.pdf}
  %  \vspace{-8mm}
@@ -776,12 +776,12 @@ The boxplots suggest that the estimation accuracy does not vary much with the di
 We check the validity of our PIT assessment tool of the TGH non-Gaussian model. In this simulation study, we generate observations with parameter of setup (a) from the previous section and fit both Gaussian and TGH non-Gaussian models. We create the PIT histogram using the method discussed in Section~\ref{sec:pit}. Fig.~\ref{fig:PIT_synthetic} suggests that the PIT histogram obtained by fitting the Gaussian model is not at all a representation of a uniform distribution. To create a single measure of model adequacy, we introduce the mean divergence distance (MDD) from the PIT histograms. The MDD is defined as the average squared divergence of the length of the bars of the histogram from the value $1$ (uniform density): the smaller the MDD, the better the fitted model. The MDD of both models is reported in Fig.~\ref{fig:PIT_synthetic}. As expected, the TGH non-Gaussian model performs better than the Gaussian model for this synthetic data.
 \begin{figure}[h]
 \centering
-\begin{subfigure}{.25\textwidth}
+\begin{subfigure}{.26\textwidth}
   \centering
   \includegraphics[width=\linewidth]{./figures/PIT_TGH.pdf}
    \caption{TGH non-Gaussian.}
 \end{subfigure}%
-\begin{subfigure}{.25\textwidth}
+\begin{subfigure}{.26\textwidth}
   \centering
   \includegraphics[width=\linewidth]{./figures/PIT_Gau.pdf}
   \caption{Gaussian.}
@@ -844,12 +844,12 @@ Gaussian & $10.36$ & $0.57$ & $0.26$ & $1.04$ & -  & -   \\
 
 \begin{figure}[h]
 \centering
-\begin{subfigure}{.25\textwidth}
+\begin{subfigure}{.26\textwidth}
   \centering
   \includegraphics[width=\linewidth]{./figures/PIT_real_nongaussian.pdf}
    \caption{TGH non-Gaussian model.}
 \end{subfigure}%
-\begin{subfigure}{.25\textwidth}
+\begin{subfigure}{.26\textwidth}
   \centering
   \includegraphics[width=\linewidth]{./figures/PIT_real_Gaussian.pdf}
   \caption{Gaussian Model.}
@@ -879,12 +879,12 @@ and AMD. We assess the performance of both
 %     \caption{Intel Haswell 36-core}
 %      \label{fig:tlrhodlr-shihab}
 %    \end{subfigure}
-      \begin{subfigure}[b]{0.43\textwidth}
+      \begin{subfigure}[b]{0.42\textwidth}
      \includegraphics[width=1\textwidth]{./figures/lr-performance-qaysar.pdf}
      \caption{56-core Intel IceLake.}
       \label{fig:tlrhodlr-qaysar}
     \end{subfigure}
-     \begin{subfigure}[b]{0.43\textwidth}
+     \begin{subfigure}[b]{0.42\textwidth}
      \includegraphics[width=1\textwidth]{./figures/lr-performance-kanary.pdf}
      \caption{128-core AMD Milan.}
      \label{fig:tlrhodlr-kanary}
@@ -947,12 +947,12 @@ up to $4.29X$ and $4.88X$ on the given machines.
 
 \begin{figure}
 \centering
-      \begin{subfigure}[b]{0.33\textwidth}
+      \begin{subfigure}[b]{0.24\textwidth}
      \includegraphics[width=1\textwidth]{./figures/iceLake-56-core-performance.pdf}
      \caption{56-core Intel IceLake.}
       \label{fig:intel-icelake}
     \end{subfigure}
-     \begin{subfigure}[b]{0.33\textwidth}
+     \begin{subfigure}[b]{0.24\textwidth}
      \includegraphics[width=1\textwidth]{./figures/amd-milan-128-core-performance.pdf}
      \caption{128-core AMD Milan.}
      \label{fig:amd-milan}
@@ -974,12 +974,12 @@ up to $4.29X$ and $4.88X$ on the given machines.
 
 \begin{figure}
 \centering
-      \begin{subfigure}[b]{0.33\textwidth}
+      \begin{subfigure}[b]{0.24\textwidth}
      \includegraphics[width=1\textwidth]{./figures/iceLake-56-core-pred-performance.pdf}
      \caption{56-core Intel IceLake.}
       \label{fig:intel-icelake-tlr}
     \end{subfigure}
-     \begin{subfigure}[b]{0.33\textwidth}
+     \begin{subfigure}[b]{0.24\textwidth}
      \includegraphics[width=1\textwidth]{./figures/amd-milan-128-core-pred-performance.pdf}
      \caption{128-core AMD Milan.}
      \label{fig:amd-milan-tlr}
@@ -1014,7 +1014,7 @@ approximation shows better performance compared to exact computation with a diff
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.75\linewidth]{./figures/shaheen-performance.pdf}
+\includegraphics[width=0.7\linewidth]{./figures/shaheen-performance.pdf}
   \caption{Performance of a single non-Gaussian MLE iteration on
 Cray XC40 system up to 512 nodes using exact and TLR matrices.
 }
